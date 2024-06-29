@@ -45,13 +45,13 @@ while True:
     indHand = -1
     hands, img = detector.findHands(img)
     # print(hands)
-    if hands:
-        for hand in hands:
-            fingersUp = detector.fingersUp(hand)
-            if fingersUp == [1, 1, 1, 1, 1]:
-                cap.release()
-                cv2.destroyAllWindows()
-                exit()
+    # if hands:
+    #     for hand in hands:
+    #         fingersUp = detector.fingersUp(hand)
+    #         if fingersUp == [1, 1, 1, 1, 1]:
+    #             cap.release()
+    #             cv2.destroyAllWindows()
+    #             exit()
     if hands and buttonPressed is False:
         if hands[0]['type'] == 'Left' and len(hands) == 1:
 
