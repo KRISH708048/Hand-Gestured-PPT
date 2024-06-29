@@ -40,10 +40,10 @@ while True:
     fullPath = os.path.join(presentationFolderPath, pathImages[slideNo])
     currentImg = cv2.imread(fullPath)
     currentImg = cv2.resize(currentImg, (width, height))
-    sideImg = cv2.resize(img, (sw, sh))
-    currentImg[0:sh, width - sw:width] = sideImg
     indHand = -1
     hands, img = detector.findHands(img)
+    sideImg = cv2.resize(img, (sw, sh))
+    currentImg[0:sh, width - sw:width] = sideImg
     # print(hands)
     # if hands:
     #     for hand in hands:
@@ -153,7 +153,7 @@ while True:
             if j != 0:
                 cv2.line(currentImg, annotations[i][j - 1], annotations[i][j], (0, 0, 255), 5)
     cv2.imshow("current image", currentImg)
-    cv2.imshow("image", img)
+    # cv2.imshow("image", img)
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
