@@ -1,7 +1,3 @@
-Got it! Here's the updated README file with instructions for uploading a presentation using `PresentationTOPngConversion.py`:
-
----
-
 # Hand Gesture-Based Presentation Controller
 
 ## Overview
